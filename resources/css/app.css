@@ -1,0 +1,107 @@
+.container {
+    margin-top: 10px;
+}
+
+.text-success {
+    color: #3ADB76;
+}
+
+.text-warning {
+    color: #FFAE00;
+}
+
+.text-error {
+    color: #EC5840;
+}
+
+i.fi-arrow-down {
+    font-size: 1.9rem;
+}
+
+.accordion-title::before {
+	font-size: 1rem;
+}
+
+.accordion-content {
+	padding-bottom: 0px;
+}
+
+.mutants {
+	cursor: pointer;
+}
+
+.mutant {
+    background: rgba(0, 255, 0, 0.5);
+}
+
+.mutant-line {
+    background: rgba(255, 255, 0, 0.5);
+}
+
+.clicky {
+	cursor: pointer;
+}
+
+.tabs-panel > .CodeMirror {
+	height: 600px;
+}
+
+.label {
+    border-radius: 50%;
+}
+
+.vmid_align {
+    vertical-align: middle;
+}
+
+h3 > .material-icons {
+    font-size: inherit;
+}
+
+.filter > .sticky:not(.is-at-bottom) {
+    top: auto !important;
+}
+
+.filter > ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+.filter > ul > a > li {
+    padding: 5px 10px;
+}
+
+.filter > ul > a > li:not(.selected):hover,
+.selected {
+    background-color: #E6E6E6;
+}
+
+.subFilter {
+    font-size: 12px;
+}
+
+.subFilter > .float-right > .badge {
+    vertical-align: top;
+    margin-top: -1em;
+}
+
+.filters {
+    border-left: 1px solid #E6E6E6;
+}
+
+#sidebar p {
+    padding: 5px 10px;
+    margin-bottom: 0.25rem;
+}
+
+#sidebar p small {
+    float: right;
+}
+
+#sidebar p:hover {
+    background-color: #E6E6E6;
+}
+
+.sidebarLine {
+    cursor: pointer;
+}

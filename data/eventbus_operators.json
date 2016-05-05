@@ -1,0 +1,8 @@
+{
+    "COI": {
+        "mutants": 6,
+        "files": [
+            "registrations.rb"
+        ]
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "12": {
+        "mutants": 1,
+        "files": [
+            "registrations.5.rb"
+        ]
+    },
+    "18": {
+        "mutants": 1,
+        "files": [
+            "registrations.0.rb"
+        ]
+    },
+    "34": {
+        "mutants": 1,
+        "files": [
+            "registrations.3.rb"
+        ]
+    },
+    "54": {
+        "mutants": 1,
+        "files": [
+            "registrations.9.rb"
+        ]
+    },
+    "60": {
+        "mutants": 1,
+        "files": [
+            "registrations.11.rb"
+        ]
+    },
+    "70": {
+        "mutants": 1,
+        "files": [
+            "registrations.14.rb"
+        ]
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "COI": {
+        "mutants": 6,
+        "lines": [
+            12,
+            18,
+            34,
+            54,
+            60,
+            70
+        ],
+        "files": [
+            "registrations.0.rb",
+            "registrations.3.rb",
+            "registrations.5.rb",
+            "registrations.9.rb",
+            "registrations.11.rb",
+            "registrations.14.rb"
+        ]
+    }
+}

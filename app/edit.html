@@ -1,0 +1,77 @@
+<!doctype html>
+
+<head>
+    <link rel="stylesheet" href="../resources/css/foundation.css" />
+    <link rel="stylesheet" href="../resources/fonts/foundation-icons.css" />
+    <link rel="stylesheet" href="../resources/css/app.css" />
+    <link rel="stylesheet" href="../resources/codemirror/codemirror.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <title>Editor</title>
+</head>
+
+<body>
+	<!-- Whatever file is being opened, show in editor -->
+        <div class="container">
+            <div class="row">
+                <div class="small-12 columns text-left">
+                    <ul class="breadcrumbs">
+                        <li><a href="results.html">Results</a></li>
+                        <li class="disabled"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-12 columns text-center">
+                    <h3>Registrations</h3>
+                </div>
+            </div>
+		
+		<div class="row">
+			<div class="small-11 large-10 columns">
+				<ul class="tabs" data-tabs id="file_tabs">
+					<li class="tabs-title is-active">
+						<a href="#original" aria-selected="true" data-mutant-line="">Original</a>
+					</li>
+				</ul>
+				
+				<div class="tabs-content" data-tabs-content="file_tabs">
+					<div class="tabs-panel is-active" id="original">
+						<textarea id="file">
+						</textarea>
+					</div>
+				</div>
+                        </div>
+                        <div class="small-1 large-2 columns" id="sidebar">
+                        </div>
+		</div>
+	</div>
+	
+	<script src="../resources/js/jquery.min.js"></script>
+	<script src="../resources/js/foundation.js"></script>
+    <script src="../resources/codemirror/codemirror.js"></script>
+    <script src="../resources/codemirror/mode/ruby.js"></script>
+	<script src="../resources/js/app.js?xx"></script>
+	<script src="../resources/codemirror/autorefresh.js"></script>
+	
+	<script type="text/javascript">
+            $(document).ready(function(){
+                $(document).foundation();
+
+                var args        = getUrlArgs();
+                var currentFile = args.currentFile;
+                var filePath    = '../event_bus/' + currentFile;
+
+                var currentCrumb = $('.breadcrumbs .disabled');
+                currentCrumb.text(currentFile);
+
+                readFile(filePath, function(responseText)
+                {
+                    var editor = createCodeEditor('file', responseText);
+                    
+                    getMutatedLines(editor, currentFile, true, args.viewType);
+                    buildEditorSidebar(args.viewType, args.currentFile);
+                    focusLine(editor, 1);
+                });
+            });
+	</script>
+</body>
